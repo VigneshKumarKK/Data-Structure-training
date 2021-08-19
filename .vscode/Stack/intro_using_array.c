@@ -82,7 +82,7 @@ int main()
         else
         break;
     }
-    printf("finally  :: ");
+    printf("finally  ::  ");
     display();
     return 0;
 }
