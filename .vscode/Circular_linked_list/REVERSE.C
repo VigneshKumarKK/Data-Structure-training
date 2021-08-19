@@ -57,10 +57,54 @@ void display()
     }    
 }
 
+int count()
+{
+    struct node *tem;
+    int cou=1;
+    tem=tail->next;
+    while(tem->next!=tail->next)
+    {
+        cou++;
+        tem=tem->next;
+    }
+    //printf("length = %d",cou);
+    return cou;
+}
+
+void reverse ()
+{
+    struct node *current, *prev, *nextn;
+    current=tail->next;
+    nextn=current->next;
+    if(tail==0)
+    {
+        printf("There is nothing to reverse");
+    }
+    else
+    {
+        while(current!=tail)
+        {
+            prev=current;
+            current=nextn;
+            nextn=current->next;
+            current->next=prev;
+        }
+        nextn->next=tail;
+        tail=nextn;
+    }
+    //display();
+}
 
 int main()
 {
     //display();
     createCiruclarLL();
+    //int abc=count();
+    //start
+    //display();
+    reverse();
+    //end
+    printf("\n\nFinal Outcome: ");
     display();
+    printf("\n\n-------------THE END-------------");
 }
