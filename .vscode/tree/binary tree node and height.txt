@@ -1,0 +1,28 @@
+Binary tree 
+
+max nodes=2^(h+1)
+min node = (h+1)
+min height=[log2(n+1)]-1
+max height=n-1;
+
+Fully Binary tree 
+
+max nodes=2^(h+1)
+min node = (2h+1)
+min height=[log2(n+1)]-1
+max height=(n-1)/2;
+
+Complete Binary tree 
+
+max nodes=2^(h+1)
+min node = 2^h
+min height=[log2(n+1)]-1
+max height=log n
+
+
+// if we want to store the binary tree in the array, then the formula for finding the child and parent is listed here;;;;
+If the node is at the ith index then:::
+
+Left child would be at (2*i)+1
+right chid would be at (2*i)+2
+parent would be at (i-1)/2;
